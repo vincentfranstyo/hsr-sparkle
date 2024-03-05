@@ -1,0 +1,498 @@
+::-webkit-scrollbar {
+    height: 12px;
+    width: .2rem;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1B1D2A;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', serif;
+    background-color: #0c0f1d;
+    color: white;
+}
+
+header {
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: auto;
+}
+
+nav {
+    background-color: #1B1D2A;
+    display: flex;
+    padding: 0.3em 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    color: #556DE5;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    font-family: 'Roboto', serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin: 0 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    display: block;
+    padding: 1.5rem 1rem;
+    text-decoration: none;
+}
+
+.dropdown-container {
+    width: 10rem;
+    display: none;
+    padding: 0.5rem;
+    position: absolute;
+    border-radius: 0.5rem;
+}
+
+.dropdown-content {
+    background-color: #1B1D2A;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: grey;
+}
+
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+main {
+    margin: 1rem;
+}
+
+#hero {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+#hero .article-title {
+    min-width: 5rem;
+    padding: 4rem 0 1rem 0;
+}
+
+#hero .article-title h1 {
+    font-family: "Berlin Sans FB Demi", serif;
+    margin: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 1em;
+    font-size: 1.45rem
+}
+
+.hero-img, .article-img {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.hero-img img, .article-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#hero .article-title {
+    color: beige
+}
+
+#hero .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#hero .card .content h2 {
+    color: beige;
+    font-family: "Juice ITC", serif;
+}
+
+#hero .card .content h2,
+#hero .card .content blockquote {
+    margin: 1rem 0;
+}
+
+.card {
+    padding: 1.2rem;
+    background-color: #1B1D2A;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+#hero .content {
+    text-align: justify;
+}
+
+#hero .content blockquote {
+    font-family: "Book Antiqua", serif;
+}
+
+#hero .content p {
+    color: aliceblue;
+    font-family: "Book Antiqua", serif;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+#hero a {
+    color: cadetblue;
+}
+
+#hero a:hover {
+    color: darkslateblue;
+}
+
+aside {
+    min-width: 20vw;
+}
+
+.voice-actor h5 {
+    color: grey;
+    margin-top: 1rem;
+}
+
+.voice-actor ul {
+    margin: .5rem 0 1rem 0;
+    list-style: circle;
+    display: flex;
+}
+
+.voice-actor li {
+    color: grey;
+    font-size: 0.6rem;
+}
+
+#hero article h2 {
+    margin-top: 1rem;
+}
+
+.voicelines h2 {
+    color: beige;
+}
+
+.voicelines ul {
+    margin: .5rem 0 1rem 0;
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+}
+
+.voicelines li {
+    color: grey;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+    font-family: "fangsong", serif
+}
+
+.voicelines li:last-child {
+    margin-bottom: 0;
+}
+
+.voicelines a {
+    font-size: 1rem;
+}
+
+#fancards, #characters {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.versions, .chars-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.versions section {
+    display: inline-block;
+}
+
+.versions section:not(:last-child) {
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+}
+
+.versions section:last-child {
+    padding-left: 1rem;
+}
+
+.chars {
+    transition: transform 0.2s;
+    border-radius: 1rem;
+}
+
+.chars img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.chars:hover, .chars:active {
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.chars h3 {
+    padding: 1rem 0 0 0;
+    font-size: 1.5rem;
+    color: beige;
+    font-family: "Bodoni MT", serif
+}
+
+.chars h4 {
+    padding: .2rem 0 0 0;
+    font-size: .8rem;
+    color: cadetblue;
+    font-family: "Segoe UI", serif
+}
+
+#fancards h1, #characters h1, #characters h2 {
+    color: beige;
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    font-family: "Berlin Sans FB Demi", serif;
+}
+
+#characters h2 {
+    font-size: 2rem;
+}
+
+.char-icon {
+    width: 100%;
+    height: auto;
+}
+
+.slide-container {
+    max-width: 50vh;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    width: auto;
+    top: 42%;
+    padding: 1rem;
+    color: white;
+    transition: 1s ease;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#fancards button {
+    border-radius: .8rem;
+    background-color: slateblue;
+    color: white;
+    padding: .5rem;
+    font-family: 'Helvetica Rounded', serif;
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+#fancards button:hover, #fancards button:active {
+    background-color: darkslateblue;
+    box-shadow: none;
+    transform: translate(3px, 3px)
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: #1B1D2A;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dropdown:active .dropdown-container {
+        display: block;
+    }
+
+    #hero {
+        flex-wrap: wrap;
+    }
+
+    #hero .article-title {
+        order: -1;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        align-items: center;
+        padding: 0 0 0 15rem;
+    }
+
+    #hero .voice-actor li{
+        font-size: 1rem;
+    }
+
+    #hero .article-title h1 {
+        margin: 1rem;
+        writing-mode: horizontal-tb;
+        letter-spacing: 0.4rem;
+    }
+
+    #hero .voicelines li {
+        font-size: 1rem
+    }
+
+    .voicelines li:nth-child(2) {
+        margin-left: .3rem
+    }
+    #characters .chars-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #hero {
+        flex-wrap: wrap;
+    }
+
+    #hero .article-title {
+        order: -1;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 0 0 2.5rem;
+    }
+
+    #hero .article-title h1 {
+        margin: 1rem;
+        writing-mode: horizontal-tb;
+        letter-spacing: 0.4rem;
+    }
+
+    .dropdown:active .dropdown-container {
+        display: block;
+    }
+
+    #characters .chars-container {
+        flex-direction: column;
+    }
+
+    .versions {
+        flex-direction: column;
+    }
+
+    .versions section:not(:last-child) {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .versions section:last-child {
+        padding-left: 0;
+    }
+
+    #characters h2 {
+        margin: .5rem 0 .5rem 0;
+    }
+
+    aside {
+        width: 100%;
+    }
+}
